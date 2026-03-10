@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Núcleo D’Aguiar | Psicologia, Neurociências & Associados</title>
+  <meta name="description" content="Clínica de psicologia em Goiânia com atendimento humanizado, psicoterapia, avaliação psicológica e neuropsicológica." />
+  <style>
+    :root {
+      --bg: #f5ece6;
+      --bg-soft: #fbf7f3;
+      --paper: #efe2da;
+      --green: #143a3b;
+      --wine: #7a2f23;
+      --gold: #c7a36a;
+      --text: #2f2a28;
+      --muted: #6f625c;
+      --white: #ffffff;
+      --shadow: 0 12px 30px rgba(35, 28, 25, 0.10);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --container: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(180deg, var(--bg-soft) 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: min(92%, var(--container));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(251, 247, 243, 0.88);
+      border-bottom: 1px solid rgba(122, 47, 35, 0.08);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+      background: var(--white);
+    }
+
+    .brand-text {
+      min-width: 0;
+    }
+
+    .brand-title {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--wine);
+      font-size: 1.35rem;
+      line-height: 1;
+      margin: 0 0 4px;
+      font-weight: 700;
+    }
+
+    .brand-subtitle {
+      margin: 0;
+      font-size: 0.78rem;
+      color: var(--green);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.96rem;
+    }
+
+    .menu a:hover { color: var(--wine); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: none;
+      border-radius: 999px;
+      padding: 14px 22px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--wine), #9d4637);
+      color: var(--white);
+      box-shadow: 0 10px 24px rgba(122, 47, 35, 0.18);
+    }
+
+    .btn-primary:hover { transform: translateY(-2px); }
+
+    .btn-outline {
+      border: 1.5px solid rgba(20, 58, 59, 0.18);
+      color: var(--green);
+      background: rgba(255,255,255,0.65);
+    }
+
+    .hero {
+      padding: 56px 0 34px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hero-card, .visual-card, .section-card {
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(199, 163, 106, 0.22);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 42px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -40px -40px auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(199,163,106,0.18), transparent 70%);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: rgba(20, 58, 59, 0.08);
+      color: var(--green);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.1rem, 4vw, 4rem);
+      color: var(--wine);
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .hero-highlights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .highlight {
+      background: var(--bg-soft);
+      border-radius: 18px;
+      padding: 14px;
+      border: 1px solid rgba(20, 58, 59, 0.08);
+    }
+
+    .highlight strong {
+      display: block;
+      color: var(--green);
+      margin-bottom: 4px;
+      font-size: 0.95rem;
+    }
+
+    .highlight span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .visual-card {
+      padding: 18px;
+    }
+
+    .hero-photo {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: calc(var(--radius) - 6px);
+      object-fit: cover;
+      background: linear-gradient(135deg, #ead9cf, #f7f0eb);
+    }
+
+    section {
+      padding: 34px 0;
+    }
+
+    .section-head {
+      margin-bottom: 22px;
+      max-width: 760px;
+    }
+
+    .section-head h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+      color: var(--wine);
+      margin-bottom: 10px;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .section-card {
+      padding: 28px;
+    }
+
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .service-item {
+      background: var(--bg-soft);
+      border-left: 4px solid var(--gold);
+      border-radius: 14px;
+      padding: 14px 14px 14px 16px;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .professionals-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .professional-card {
+      background: rgba(255,255,255,0.78);
+      border-radius: var(--radius);
+      padding: 18px;
+      border: 1px solid rgba(20, 58, 59, 0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .professional-card img {
+      width: 100%;
+      aspect-ratio: 4 / 4.5;
+      object-fit: cover;
+      border-radius: 18px;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ead8cf, #f5efe9);
+    }
+
+    .professional-card h3 {
+      margin-bottom: 6px;
+      color: var(--green);
+      font-size: 1.2rem;
+    }
+
+    .professional-role {
+      color: var(--wine);
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .professional-card p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 0.96rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      background: linear-gradient(135deg, #e6d4ca, #f3ebe5);
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      margin: 18px 0 26px;
+    }
+
+    .contact-item {
+      background: var(--bg-soft);
+      border-radius: 16px;
+      padding: 14px 16px;
+      border: 1px solid rgba(199, 163, 106, 0.16);
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--green);
+      margin-bottom: 4px;
+    }
+
+    iframe {
+      width: 100%;
+      min-height: 100%;
+      border: 0;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      min-height: 430px;
+    }
+
+    .footer {
+      padding: 28px 0 60px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 999;
+      background: #25d366;
+      color: white;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 10px 26px rgba(37, 211, 102, 0.35);
+    }
+
+    .muted-note {
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-top: 12px;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-grid,
+      .location-grid,
+      .professionals-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-highlights,
+      .services-list {
+        grid-template-columns: 1fr;
+      }
+
+      .menu {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-card,
+      .section-card {
+        padding: 22px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .brand-title {
+        font-size: 1.08rem;
+      }
+
+      .brand-subtitle {
+        font-size: 0.68rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#inicio" class="brand">
+        <img class="brand-logo" src="logo.png" alt="Logo Núcleo D'Aguiar" />
+        <div class="brand-text">
+          <p class="brand-title">Núcleo D’Aguiar</p>
+          <p class="brand-subtitle">Psicologia, Neurociências & Associados</p>
+        </div>
+      </a>
+
+      <nav class="menu">
+        <a href="#sobre">A clínica</a>
+        <a href="#profissionais">Profissionais</a>
+        <a href="#espaco">Nosso espaço</a>
+        <a href="#localizacao">Localização</a>
+        <a href="#contato" class="btn btn-primary">Agendar pelo WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-card">
+          <span class="eyebrow">Cuidado psicológico com base científica</span>
+          <h1>Psicologia, neurociências e acolhimento em um só lugar.</h1>
+          <p>
+            O Núcleo D’Aguiar oferece atendimento psicológico com escuta qualificada,
+            seriedade técnica e um ambiente pensado para promover segurança, cuidado e bem-estar.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/5562991787997" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+            <a class="btn btn-outline" href="#profissionais">Conhecer a equipe</a>
+          </div>
+
+          <div class="hero-highlights">
+            <div class="highlight">
+              <strong>Atendimento presencial</strong>
+              <span>Goiânia, em ambiente acolhedor e profissional.</span>
+            </div>
+            <div class="highlight">
+              <strong>Equipe especializada</strong>
+              <span>Psicologia clínica, avaliação psicológica e neuropsicológica.</span>
+            </div>
+            <div class="highlight">
+              <strong>Contato facilitado</strong>
+              <span>Agendamento rápido pelo WhatsApp.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="visual-card">
+          <img class="hero-photo" src="clinica-capa.jpg" alt="Imagem principal da clínica" />
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container">
+        <div class="section-head">
+          <h2>Sobre a clínica</h2>
+          <p>
+            Uma proposta de cuidado que integra escuta humana, responsabilidade técnica e ciência aplicada à saúde mental.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="section-card">
+            <p>
+              O <strong>Núcleo D’Aguiar</strong> é uma clínica de psicologia voltada ao cuidado emocional
+              com base científica, ética profissional e atendimento humanizado. Nosso espaço foi pensado
+              para oferecer acolhimento, privacidade e conforto a adolescentes, adultos e famílias.
+            </p>
+            <p>
+              Atuamos com foco em psicoterapia, avaliação psicológica e neuropsicológica, respeitando a singularidade
+              de cada pessoa e promovendo um cuidado comprometido com qualidade técnica e sensibilidade clínica.
+            </p>
+          </div>
+
+          <div class="section-card">
+            <h3 style="color: var(--green); margin-bottom: 12px;">Áreas de atendimento</h3>
+            <div class="services-list">
+              <div class="service-item">Psicoterapia individual</div>
+              <div class="service-item">Avaliação psicológica</div>
+              <div class="service-item">Avaliação neuropsicológica</div>
+              <div class="service-item">Orientação vocacional</div>
+              <div class="service-item">Atendimento a adolescentes</div>
+              <div class="service-item">Atendimento a adultos</div>
+            </div>
+            <p class="muted-note">Edite esta lista conforme os serviços que deseja divulgar no site.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="profissionais">
+      <div class="container">
+        <div class="section-head">
+          <h2>Nossa equipe</h2>
+          <p>
+            Apresente os profissionais da clínica com foto, CRP e uma descrição breve para transmitir confiança e clareza.
+          </p>
+        </div>
+
+        <div class="professionals-grid">
+          <article class="professional-card">
+            <img src="profissional-1.jpg" alt="Foto de Ereniz L. Castro Quispe" />
+            <h3>Ereniz L. Castro Quispe</h3>
+            <div class="professional-role">Psicóloga Clínica • CRP 09/21728</div>
+            <p>
+              Especialista em Terapia Cognitivo-Comportamental e pós-graduada em Neuropsicologia.
+              Cofundadora e responsável técnica do Núcleo D’Aguiar
+
+    <section id="espaco">
+      <div class="container">
+        <div class="section-head">
+          <h2>Nosso espaço</h2>
+          <p>
+            Mostre fotos reais da recepção e das salas para gerar familiaridade e segurança antes do primeiro contato.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <img src="galeria-1.jpg" alt="Recepção da clínica" />
+          <img src="galeria-2.jpg" alt="Sala de terapia individual" />
+          <img src="galeria-3.jpg" alt="Sala infantil" />
+          <img src="galeria-4.jpg" alt="Sala de avaliação neuropsicológica" />
+        </div>
+      </div>
+    </section>
+
+    <section id="localizacao">
+      <div class="container location-grid">
+        <div class="section-card">
+          <div class="section-head" style="margin-bottom: 14px;">
+            <h2>Localização e contato</h2>
+            <p>
+              Facilite o acesso dos pacientes com endereço, WhatsApp, Instagram e mapa incorporado.
+            </p>
+          </div>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <strong>Endereço</strong>
+              <span>Av. T-1, 1536, Setor Bueno, Goiânia - GO</span>
+            </div>
+
+            <div class="contact-item">
+              <strong>WhatsApp</strong>
+              <span>(62) 99999-9999</span>
+            </div>
+
+            <div class="contact-item">
+              <strong>Instagram</strong>
+              <span>@nucleodaguiar</span>
+            </div>
+
+            <div class="contact-item">
+              <strong>Horário de funcionamento</strong>
+              <span>Segunda a sexta, conforme agendamento</span>
+            </div>
+          </div>
+
+          <div id="contato">
+            <a class="btn btn-primary" href="https://wa.me/5562991787997" target="_blank" rel="noopener noreferrer">Agendar atendimento</a>
+          </div>
+
+          <p class="muted-note">
+            Substitua o link do WhatsApp, Instagram, endereço e mapa pelos dados reais da clínica antes de publicar.
+          </p>
+        </div>
+
+        <div>
+          <iframe
+            title="Mapa da clínica"
+            src="https://www.google.com/maps?q=Av.%20T-1,%201536,%20Setor%20Bueno,%20Goi%C3%A2nia&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p><strong>Núcleo D’Aguiar</strong> • Psicologia, Neurociências & Associados</p>
+      <p>Site institucional simples para apresentação da clínica, equipe e formas de contato.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5562991787997" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+    ✆
+  </a>
+</body>
+</html>
