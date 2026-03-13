@@ -1569,3 +1569,22 @@ max-width:92%;
   flex-direction: column;
   line-height: 1.1;
 }
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+text-decoration:none;
+}
+
+.brand-icon{
+height:42px;
+width:auto;
+display:block;
+}
+
+.brand-text{
+display:flex;
+flex-direction:column;
+line-height:1.1;
+}
