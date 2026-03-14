@@ -1,333 +1,291 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Sobre | Núcleo D’Aguiar</title>
+  <title>Sobre | Núcleo D’Aguiar – Psicologia em Goiânia</title>
 
-<meta name="description" content="Conheça a história, missão, visão e valores do Núcleo D’Aguiar, clínica de psicologia em Goiânia com atendimento presencial e online." />
+  <meta name="description" content="Conheça a história, missão e valores do Núcleo D’Aguiar, clínica de psicologia em Goiânia especializada em terapia cognitivo-comportamental e avaliação neuropsicológica." />
+  <meta name="keywords" content="psicólogo em Goiânia, clínica de psicologia Goiânia, avaliação neuropsicológica Goiânia, terapia cognitivo comportamental Goiânia" />
+  <meta name="author" content="Núcleo D’Aguiar" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#1F4A43" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta property="og:title" content="Núcleo D’Aguiar | Psicologia em Goiânia" />
+  <meta property="og:description" content="Clínica de psicologia e neurociências em Goiânia com atendimento presencial e online." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nucleodaguiar.github.io/nucleo-daguiar-site/sobre.html" />
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://nucleodaguiar.github.io/nucleo-daguiar-site/sobre.html" />
 
-<link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-.sobre-container{
-max-width:900px;
-margin:auto;
-text-align:center;
-}
+  <link rel="stylesheet" href="assets/css/style.css" />
 
-.sobre-container p{
-margin-bottom:1.2rem;
-line-height:1.8;
-}
+  <style>
+    .sobre-container {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
 
-.frase-destaque{
-font-weight:600;
-font-size:1.05rem;
-}
+    .sobre-container p {
+      margin-bottom: 1.3rem;
+      line-height: 1.8;
+    }
 
-.mvv-section{
-margin-top:60px;
-}
+    .frase-destaque {
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
 
-.mvv-header{
-text-align:center;
-margin-bottom:40px;
-}
+    .mvv-section {
+      margin-top: 70px;
+    }
 
-.mvv-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:28px;
-}
+    .mvv-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-.mvv-card{
-background:white;
-padding:40px 32px;
-border-radius:18px;
-box-shadow:0 10px 35px rgba(0,0,0,0.06);
-transition:all .3s ease;
-border:1px solid rgba(0,0,0,0.04);
-}
+    .mvv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
 
-.mvv-card:hover{
-transform:translateY(-6px);
-box-shadow:0 16px 40px rgba(0,0,0,0.08);
-}
+    .mvv-card {
+      background: white;
+      padding: 40px 32px;
+      border-radius: 18px;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+    }
 
-.mvv-icon{
-font-size:28px;
-margin-bottom:14px;
-color:#1F4A43;
-}
+    .mvv-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+    }
 
-.mvv-card h3{
-font-family:'Cormorant Garamond',serif;
-font-size:26px;
-margin-bottom:12px;
-}
+    .mvv-icon {
+      font-size: 28px;
+      margin-bottom: 14px;
+      color: #1F4A43;
+    }
 
-.mvv-card p{
-font-size:15px;
-line-height:1.7;
-}
+    .mvv-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
 
-@media(max-width:900px){
-.mvv-grid{
-grid-template-columns:1fr;
-}
-}
+    .mvv-card p {
+      font-size: 15px;
+      line-height: 1.7;
+    }
 
-</style>
+    .whatsapp-float {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      background: #25D366;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 40px;
+      font-weight: 500;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+      z-index: 999;
+    }
 
+    .whatsapp-float:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 900px) {
+      .mvv-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Núcleo D’Aguiar – Psicologia, Neurociências & Associados",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Goiânia",
+        "addressRegion": "GO",
+        "addressCountry": "BR"
+      },
+      "areaServed": "Goiânia",
+      "medicalSpecialty": "Psychology"
+    }
+  </script>
 </head>
 
-<body class="page-sobre">
+<body>
 
-<header class="site-header">
-<div class="container header-wrap">
+  <header class="site-header">
+    <div class="container header-wrap">
+      <a href="index.html" class="brand">
+        <img src="assets/img/icone_header_256.png" class="brand-icon" alt="Ícone Núcleo D’Aguiar" />
 
-<a href="index.html" class="brand">
+        <div class="brand-text">
+          <span class="brand-title">Núcleo D’Aguiar</span>
+          <span class="brand-subtitle">Psicologia, Neurociências & Associados</span>
+        </div>
+      </a>
 
-<img src="assets/img/icone_header_256.png" class="brand-icon">
+      <nav class="main-nav">
+        <a href="index.html">Início</a>
+        <a href="sobre.html" class="active">Sobre</a>
+        <a href="especialidades.html">Especialidades</a>
+        <a href="equipe.html">Equipe</a>
+        <a href="contato.html">Contato</a>
+      </nav>
 
-<div class="brand-text">
-<span class="brand-title">Núcleo D’Aguiar</span>
-<span class="brand-subtitle">Psicologia, Neurociências & Associados</span>
-</div>
+      <a href="https://wa.me/5562991787997" class="btn btn-primary">Agendar consulta</a>
+    </div>
+  </header>
 
-</a>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Sobre</span>
 
-<nav class="main-nav">
+        <h1>Um espaço pensado para acolher, compreender e construir caminhos mais saudáveis</h1>
 
-<a href="index.html">Início</a>
-<a href="sobre.html" class="active">Sobre</a>
-<a href="especialidades.html">Especialidades</a>
-<a href="equipe.html">Equipe</a>
-<a href="contato.html">Contato</a>
-<a href="local.html">Local</a>
+        <p>Conheça a história e o propósito do Núcleo D’Aguiar.</p>
+      </div>
+    </section>
 
-</nav>
+    <section class="page-section">
+      <div class="container sobre-container">
+        <h2>Sobre a clínica</h2>
 
-<a href="https://wa.me/5562991787997" class="btn btn-primary">Agendar consulta</a>
+        <p>O Núcleo D’Aguiar nasceu antes de ter paredes ou logomarca. Nasceu como propósito: tornar a psicologia acessível, humana e fundamentada em ciência.</p>
 
-</div>
-</header>
+        <p>Durante anos, a ideia cresceu dentro de uma inquietação: a psicologia precisa acolher sem deixar de orientar, precisa ser leve, mas também transformadora.</p>
 
-<main>
+        <p>Nos atendimentos clínicos, tornou-se comum ouvir relatos de pessoas que buscavam não apenas falar sobre seus sentimentos, mas também compreender o que estavam vivendo e aprender caminhos possíveis para lidar com suas dificuldades.</p>
 
-<section class="page-hero">
-<div class="container">
+        <p>Essas experiências revelaram uma necessidade clara: criar um espaço onde acolhimento e ciência caminhem juntos.</p>
 
-<span class="eyebrow">Sobre</span>
+        <p>Assim, o Núcleo D’Aguiar surgiu não apenas como uma clínica, mas como um lugar de encontro entre o sentir e o compreender.</p>
 
-<h1>
-Um espaço pensado para acolher, compreender e construir caminhos mais saudáveis
-</h1>
+        <p>Nossa missão é promover saúde mental com ciência, humanidade e direção, oferecendo atendimentos psicológicos e neuropsicológicos baseados em evidências e conduzidos com empatia, clareza e responsabilidade.</p>
 
-<p>
-Conheça a história e o propósito do Núcleo D’Aguiar.
-</p>
+        <p class="frase-destaque">Acolhemos com base em evidências. Conduzimos com propósito.</p>
 
-</div>
-</section>
+        <p>Atuamos em diferentes fases da vida:</p>
 
-<section class="page-section">
+        <p>
+          Infância — desenvolvimento emocional e orientação familiar<br>
+          Adolescência — psicoterapia e orientação vocacional<br>
+          Vida adulta — psicoterapia, avaliação psicológica e avaliação neuropsicológica
+        </p>
 
-<div class="container sobre-container">
+        <p>O Núcleo nasceu da visão da psicóloga <strong>Ereniz L. Castro Quispe</strong>, responsável técnica da clínica e especialista em Terapia Cognitivo-Comportamental e Neuropsicologia.</p>
 
-<h2>Sobre a clínica</h2>
+        <p class="frase-destaque">Não trabalhamos com volume. Trabalhamos com propósito.</p>
 
-<p>
-O Núcleo D’Aguiar nasceu antes de ter paredes ou logomarca. Nasceu como propósito: o desejo de tornar a psicologia acessível, humana e fundamentada em ciência.
-</p>
+        <p>Cada pessoa atendida faz parte dessa história. Acreditamos que a transformação acontece quando alguém é visto, ouvido e compreendido.</p>
+      </div>
+    </section>
 
-<p>
-Durante anos, a ideia cresceu dentro de uma inquietação:
-</p>
+    <section class="page-section mvv-section">
+      <div class="container">
+        <div class="mvv-header">
+          <h2>Missão, visão e valores</h2>
 
-<p><em>
-“A psicologia precisa acolher sem deixar de orientar. Precisa ser leve, mas também transformadora.”
-</em></p>
+          <p>Os pilares que orientam o cuidado no Núcleo D’Aguiar.</p>
+        </div>
 
-<p>
-Nos atendimentos clínicos, era comum ouvir frases como:
-</p>
+        <div class="mvv-grid">
+          <div class="mvv-card">
+            <div class="mvv-icon">🧭</div>
 
-<p><em>
-“Já tentei terapia, mas não sabia o que fazer com o que eu sentia.”
-</em></p>
+            <h3>Missão</h3>
 
-<p><em>
-“Eu queria entender o meu problema, não só desabafar.”
-</em></p>
+            <p>Promover saúde mental com ciência, humanidade e direção clínica, oferecendo atendimentos psicológicos e neuropsicológicos baseados em evidências e conduzidos com empatia, clareza e responsabilidade.</p>
+          </div>
 
-<p>
-Essas vivências revelaram uma necessidade: criar um espaço onde acolhimento e ciência caminhassem lado a lado.
-</p>
+          <div class="mvv-card">
+            <div class="mvv-icon">🌱</div>
 
-<p>
-Assim, o Núcleo D’Aguiar nasceu não apenas como uma clínica, mas como um lugar de encontro entre o sentir e o compreender.
-</p>
+            <h3>Visão</h3>
 
-<p>
-Mais do que tratar, buscamos traduzir ciência em acolhimento, ajudando cada pessoa a compreender o que sente e construir caminhos possíveis.
-</p>
+            <p>Ser referência em cuidado psicológico em Goiânia, contribuindo para uma cultura de saúde mental mais consciente, acessível e fundamentada em ciência.</p>
+          </div>
 
-<p class="frase-destaque">
-Acolhemos com base em evidências. Conduzimos com propósito.
-</p>
+          <div class="mvv-card">
+            <div class="mvv-icon">🤝</div>
 
-<p>
-Atuamos em diferentes fases da vida:
-</p>
+            <h3>Valores</h3>
 
-<p>
-Infância — desenvolvimento e orientação familiar<br>
-Adolescência — psicoterapia e orientação vocacional<br>
-Vida adulta — terapia cognitivo-comportamental, avaliação psicológica e neuropsicológica e terapia de casal
-</p>
-
-<p>
-O Núcleo nasceu da visão da psicóloga <strong>Ereniz L. Castro Quispe</strong>, responsável técnica da clínica, especialista em Terapia Cognitivo-Comportamental e Neuropsicologia.
-</p>
-
-<p class="frase-destaque">
-Não trabalhamos com volume. Trabalhamos com propósito.
-</p>
-
-<p>
-A transformação acontece quando alguém é visto, ouvido e compreendido.
-</p>
-
-</div>
-
-</section>
-
-<section class="page-section mvv-section">
-
-<div class="container">
-
-<div class="mvv-header">
-
-<h2>Missão, visão e valores</h2>
-
-<p>
-Os pilares que orientam o cuidado no Núcleo D’Aguiar.
-</p>
-
-</div>
-
-<div class="mvv-grid">
-
-<div class="mvv-card">
-
-<div class="mvv-icon">🧭</div>
-
-<h3>Missão</h3>
-
-<p>
-Promover saúde mental com ciência, humanidade e direção clínica, oferecendo atendimentos psicológicos e neuropsicológicos baseados em evidências e conduzidos com clareza, empatia e responsabilidade.
-</p>
-
-</div>
-
-<div class="mvv-card">
-
-<div class="mvv-icon">🌱</div>
-
-<h3>Visão</h3>
-
-<p>
-Ser referência em cuidado psicológico que integra técnica, acolhimento e propósito, contribuindo para uma cultura de saúde mental mais consciente, acessível e transformadora.
-</p>
-
-</div>
-
-<div class="mvv-card">
-
-<div class="mvv-icon">🤝</div>
-
-<h3>Valores</h3>
-
-<p>
-Ciência baseada em evidências, ética profissional, escuta qualificada, respeito à singularidade e compromisso com a autonomia e o fortalecimento emocional de cada pessoa atendida.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="cta-section">
-
-<div class="container cta-box">
-
-<div>
-<h2>Se deseja iniciar seu acompanhamento</h2>
-<p>
-Fale com a clínica e saiba qual profissional pode te ajudar.
-</p>
-</div>
-
-<a href="https://wa.me/5562991787997" class="btn btn-primary">
-Agendar consulta
-</a>
-
-</div>
-
-</section>
-
-</main>
-
-<footer class="site-footer">
-
-<div class="container footer-grid">
-
-<div>
-<h3>Núcleo D’Aguiar</h3>
-<p>Psicologia, Neurociências & Associados</p>
-</div>
-
-<div>
-<h4>Navegação</h4>
-<ul>
-<li><a href="index.html">Início</a></li>
-<li><a href="sobre.html">Sobre</a></li>
-<li><a href="especialidades.html">Especialidades</a></li>
-<li><a href="equipe.html">Equipe</a></li>
-<li><a href="contato.html">Contato</a></li>
-</ul>
-</div>
-
-<div>
-<h4>Contato</h4>
-<ul>
-<li><a href="https://wa.me/5562991787997">WhatsApp</a></li>
-<li><a href="https://instagram.com/nucleo.daguiar">Instagram</a></li>
-<li>Av. T-1, 1536 — Setor Bueno — Goiânia</li>
-</ul>
-</div>
-
-</div>
-
-<div class="container footer-bottom">
-<p>© Núcleo D’Aguiar. Todos os direitos reservados.</p>
-</div>
-
-</footer>
-
-<script src="assets/js/script.js"></script>
-
+            <p>Ética profissional, ciência baseada em evidências, escuta qualificada, respeito à singularidade de cada pessoa e compromisso com autonomia e desenvolvimento emocional.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-box">
+        <div>
+          <h2>Deseja iniciar acompanhamento psicológico?</h2>
+
+          <p>Entre em contato com a clínica e saiba qual profissional pode te ajudar.</p>
+        </div>
+
+        <a href="https://wa.me/5562991787997" class="btn btn-primary">Agendar consulta</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Núcleo D’Aguiar</h3>
+        <p>Psicologia, Neurociências & Associados</p>
+      </div>
+
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="especialidades.html">Especialidades</a></li>
+          <li><a href="equipe.html">Equipe</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5562991787997">WhatsApp</a></li>
+          <li>Goiânia – GO</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© Núcleo D’Aguiar. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5562991787997">WhatsApp</a>
+
+  <script src="assets/js/script.js"></script>
 </body>
+
 </html>
