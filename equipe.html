@@ -35,293 +35,6 @@
   <meta name="twitter:title" content="Equipe | Núcleo D’Aguiar – Psicologia em Goiânia" />
   <meta name="twitter:description" content="Conheça a equipe do Núcleo D’Aguiar e as modalidades de atendimento disponíveis." />
   <meta name="twitter:image" content="https://nucleodaguiar.github.io/nucleo-daguiar-site/assets/img/icone_header_256.png" />
-
-  <style>
-    .page-equipe .page-hero {
-      position: relative;
-      padding: 78px 0 38px;
-      background:
-        radial-gradient(circle at top left, rgba(196, 130, 98, 0.11) 0%, rgba(196, 130, 98, 0) 30%),
-        radial-gradient(circle at bottom right, rgba(31, 74, 67, 0.08) 0%, rgba(31, 74, 67, 0) 30%),
-        linear-gradient(180deg, rgba(250, 247, 243, 0.95), rgba(243, 237, 230, 0));
-      overflow: hidden;
-      text-align: center;
-    }
-
-    .page-equipe .page-hero::after {
-      content: "";
-      position: absolute;
-      inset: auto 0 0 0;
-      height: 1px;
-      background: linear-gradient(90deg, rgba(31, 74, 67, 0), rgba(31, 74, 67, 0.10), rgba(31, 74, 67, 0));
-    }
-
-    .page-equipe .page-hero .container {
-      max-width: 1180px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .page-equipe .page-hero .eyebrow {
-      margin-bottom: 14px;
-    }
-
-    .hero-title {
-      max-width: 1080px;
-      margin: 0 auto 16px;
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(42px, 4.3vw, 64px);
-      line-height: 1.08;
-      letter-spacing: -0.03em;
-      text-align: center;
-      color: #264f47;
-      text-wrap: balance;
-    }
-
-    .page-equipe .page-hero p {
-      max-width: 760px;
-      margin: 0 auto;
-      font-size: 18px;
-      line-height: 1.72;
-      color: rgba(47, 47, 47, 0.82);
-    }
-
-    .team-page-wrap {
-      max-width: 1180px;
-      margin: 0 auto;
-    }
-
-    .team-intro {
-      max-width: 860px;
-      margin: 0 auto 28px;
-      text-align: center;
-    }
-
-    .team-intro h2 {
-      margin-bottom: 12px;
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(2.1rem, 3vw, 3rem);
-      line-height: 1.06;
-      letter-spacing: -0.02em;
-      color: #264f47;
-    }
-
-    .team-intro p {
-      color: #6f6a64;
-      line-height: 1.78;
-    }
-
-    .team-full-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 26px;
-      align-items: stretch;
-    }
-
-    .team-card-premium {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      min-height: 100%;
-      overflow: hidden;
-      background: linear-gradient(180deg, rgba(255,255,255,0.985) 0%, rgba(248,244,238,0.985) 100%);
-      border: 1px solid rgba(31, 74, 67, 0.10);
-      border-radius: 28px;
-      box-shadow: 0 18px 44px rgba(31, 74, 67, 0.08);
-      transition:
-        transform 0.32s ease,
-        box-shadow 0.32s ease,
-        border-color 0.32s ease;
-    }
-
-    .team-card-premium:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 26px 54px rgba(31, 74, 67, 0.12);
-      border-color: rgba(31, 74, 67, 0.16);
-    }
-
-    .team-photo-wrap {
-      position: relative;
-      min-height: 100%;
-      background: linear-gradient(135deg, rgba(243, 237, 230, 1) 0%, rgba(233, 225, 216, 0.95) 100%);
-      overflow: hidden;
-    }
-
-    .team-photo-wrap img {
-      width: 100%;
-      height: 100%;
-      min-height: 100%;
-      object-fit: cover;
-      object-position: center;
-      transition: transform 0.4s ease;
-    }
-
-    .team-card-premium:hover .team-photo-wrap img {
-      transform: scale(1.03);
-    }
-
-    .team-card-body {
-      padding: 28px 28px 26px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .team-card-body h2 {
-      margin-bottom: 8px;
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(2rem, 2.2vw, 2.5rem);
-      line-height: 1.04;
-      letter-spacing: -0.02em;
-      color: #264f47;
-    }
-
-    .team-meta {
-      margin-bottom: 14px;
-      color: #264f47;
-      font-size: 1rem;
-      font-weight: 600;
-    }
-
-    .team-badge-premium {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: fit-content;
-      margin-bottom: 18px;
-      padding: 9px 14px;
-      border-radius: 999px;
-      background: rgba(196, 130, 98, 0.13);
-      color: #b16f4f;
-      font-size: 0.92rem;
-      font-weight: 700;
-    }
-
-    .team-card-body p:last-of-type {
-      color: #59534e;
-      line-height: 1.82;
-    }
-
-    .team-card-body .btn {
-      align-self: flex-start;
-      margin-top: 18px;
-    }
-
-    .cta-team {
-      max-width: 940px;
-      margin: 0 auto;
-      padding: clamp(28px, 4vw, 44px);
-      background: linear-gradient(135deg, rgba(255,255,255,0.94), rgba(250,247,243,0.98));
-      border: 1px solid rgba(31,74,67,0.08);
-      border-radius: 28px;
-      box-shadow: 0 22px 52px rgba(31,74,67,0.08);
-      text-align: center;
-    }
-
-    .cta-team h2 {
-      max-width: 16ch;
-      margin: 0 auto 12px;
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(2rem, 2.8vw, 2.7rem);
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-      color: #264f47;
-    }
-
-    .cta-team p {
-      max-width: 700px;
-      margin: 0 auto 1.6rem;
-      color: #6f6a64;
-      line-height: 1.8;
-    }
-
-    .cta-team-actions {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .btn-outline-soft {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 22px;
-      border: 1px solid rgba(31, 74, 67, 0.18);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.60);
-      color: #264f47;
-      font-weight: 600;
-      transition:
-        transform 0.28s ease,
-        background 0.28s ease,
-        border-color 0.28s ease;
-    }
-
-    .btn-outline-soft:hover {
-      transform: translateY(-2px);
-      background: rgba(255, 255, 255, 0.88);
-      border-color: rgba(31, 74, 67, 0.28);
-    }
-
-    @media (max-width: 1080px) {
-      .team-card-premium {
-        grid-template-columns: 1fr;
-      }
-
-      .team-photo-wrap {
-        min-height: 320px;
-      }
-    }
-
-    @media (max-width: 900px) {
-      .team-full-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .page-equipe .page-hero {
-        padding: 54px 0 24px;
-      }
-
-      .hero-title {
-        max-width: 95%;
-        font-size: 34px;
-        line-height: 1.16;
-      }
-
-      .page-equipe .page-hero p {
-        max-width: 92%;
-        font-size: 16px;
-      }
-
-      .team-card-body {
-        padding: 24px 20px 22px;
-      }
-
-      .team-card-body h2 {
-        font-size: 2rem;
-      }
-
-      .team-photo-wrap {
-        min-height: 280px;
-      }
-
-      .cta-team {
-        padding: 24px 18px;
-        border-radius: 22px;
-      }
-
-      .cta-team-actions {
-        flex-direction: column;
-      }
-
-      .cta-team-actions .btn,
-      .cta-team-actions .btn-outline-soft {
-        width: 100%;
-      }
-    }
-  </style>
 </head>
 
 <body class="page-equipe">
@@ -372,10 +85,10 @@
           </p>
         </div>
 
-        <div class="team-full-grid fade-up">
+        <div class="team-list fade-up">
 
-          <article class="team-card-premium">
-            <div class="team-photo-wrap">
+          <article class="team-card-premium team-card-horizontal">
+            <div class="team-photo-wrap small-photo">
               <img src="assets/img/ana-caroline.jpg" alt="Foto da psicóloga Ana Caroline Sousa" />
             </div>
             <div class="team-card-body">
@@ -389,8 +102,8 @@
             </div>
           </article>
 
-          <article class="team-card-premium">
-            <div class="team-photo-wrap">
+          <article class="team-card-premium team-card-horizontal">
+            <div class="team-photo-wrap small-photo">
               <img src="assets/img/ereniz.jpg" alt="Foto da psicóloga Ereniz Castro" />
             </div>
             <div class="team-card-body">
@@ -404,8 +117,8 @@
             </div>
           </article>
 
-          <article class="team-card-premium">
-            <div class="team-photo-wrap">
+          <article class="team-card-premium team-card-horizontal">
+            <div class="team-photo-wrap small-photo">
               <img src="assets/img/estevao.jpg" alt="Foto do psicólogo Estevão Ortiz Ribeiro" />
             </div>
             <div class="team-card-body">
@@ -419,8 +132,8 @@
             </div>
           </article>
 
-          <article class="team-card-premium">
-            <div class="team-photo-wrap">
+          <article class="team-card-premium team-card-horizontal">
+            <div class="team-photo-wrap small-photo">
               <img src="assets/img/gessica.jpg" alt="Foto da psicóloga Gessica Pires" />
             </div>
             <div class="team-card-body">
