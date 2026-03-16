@@ -1797,3 +1797,334 @@ margin-bottom:12px;
 }
 
 }
+
+/* =========================================================
+   AJUSTES PREMIUM GERAIS — NÚCLEO D’AGUIAR
+   ========================================================= */
+
+/* HERO PREMIUM GERAL */
+
+.page-hero{
+  position:relative;
+  overflow:hidden;
+  padding:78px 0 38px;
+  background:
+    radial-gradient(circle at top left, rgba(196,130,98,.11) 0%, rgba(196,130,98,0) 30%),
+    radial-gradient(circle at bottom right, rgba(31,74,67,.08) 0%, rgba(31,74,67,0) 30%),
+    linear-gradient(180deg, rgba(250,247,243,.95), rgba(243,237,230,0));
+  text-align:center;
+}
+
+.page-hero::after{
+  content:"";
+  position:absolute;
+  inset:auto 0 0 0;
+  height:1px;
+  background:linear-gradient(90deg, rgba(31,74,67,0), rgba(31,74,67,.10), rgba(31,74,67,0));
+}
+
+.page-hero .container{
+  position:relative;
+  z-index:1;
+  max-width:1180px;
+}
+
+.page-hero .eyebrow{
+  margin-bottom:14px;
+}
+
+.page-hero h1,
+.hero-title{
+  max-width:1080px;
+  margin:0 auto 16px;
+  font-family:"Cormorant Garamond", serif;
+  font-size:clamp(42px, 4.3vw, 64px);
+  line-height:1.08;
+  letter-spacing:-.03em;
+  text-align:center;
+  color:#264f47;
+  text-wrap:balance;
+}
+
+.page-hero p{
+  max-width:760px;
+  margin:0 auto;
+  font-size:18px;
+  line-height:1.72;
+  color:rgba(47,47,47,.82);
+}
+
+/* CARDS PREMIUM GERAIS */
+
+.content-card,
+.service-card,
+.team-card,
+.team-mini-card,
+.feature-card,
+.mode-card,
+.step-card,
+.info-card,
+.mini-info-card{
+  position:relative;
+  background:linear-gradient(180deg, rgba(255,255,255,.985) 0%, rgba(248,244,238,.985) 100%);
+  border:1px solid rgba(31,74,67,.10);
+  border-radius:28px;
+  box-shadow:0 18px 44px rgba(31,74,67,.08);
+  overflow:hidden;
+  transition:
+    transform .32s ease,
+    box-shadow .32s ease,
+    border-color .32s ease;
+}
+
+.content-card::before,
+.service-card::before,
+.team-card::before,
+.team-mini-card::before,
+.feature-card::before,
+.mode-card::before,
+.step-card::before,
+.info-card::before,
+.mini-info-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:16%;
+  width:68%;
+  height:1px;
+  background:linear-gradient(90deg, rgba(196,130,98,0), rgba(196,130,98,.48), rgba(196,130,98,0));
+}
+
+.content-card:hover,
+.service-card:hover,
+.team-card:hover,
+.team-mini-card:hover,
+.feature-card:hover,
+.mode-card:hover,
+.step-card:hover,
+.info-card:hover,
+.mini-info-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 26px 54px rgba(31,74,67,.12);
+  border-color:rgba(31,74,67,.16);
+}
+
+/* ESPECIALIDADES — ÍCONES PREMIUM */
+
+.service-card{
+  padding:30px 28px 28px;
+}
+
+.service-card h2,
+.service-card h3{
+  margin-bottom:12px;
+  font-family:"Cormorant Garamond", serif;
+  font-size:clamp(2rem, 2.2vw, 2.4rem);
+  line-height:1.06;
+  letter-spacing:-.02em;
+  color:#264f47;
+}
+
+.service-card p{
+  color:#5b5550;
+  line-height:1.82;
+}
+
+.service-card::after{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:58px;
+  height:58px;
+  margin-bottom:16px;
+  border-radius:50%;
+  background:rgba(31,74,67,.08);
+  color:#264f47;
+  font-size:1.35rem;
+}
+
+/* atribuição de ícones por ordem dos cards */
+.service-card:nth-child(1)::after{ content:"🧠"; }
+.service-card:nth-child(2)::after{ content:"⚕️"; }
+.service-card:nth-child(3)::after{ content:"🔎"; }
+.service-card:nth-child(4)::after{ content:"🏡"; }
+.service-card:nth-child(5)::after{ content:"🌱"; }
+.service-card:nth-child(6)::after{ content:"💻"; }
+
+/* como o ::after precisa aparecer acima do título */
+.service-card{
+  display:flex;
+  flex-direction:column;
+}
+
+.service-card::after{
+  order:-1;
+}
+
+/* EQUIPE — HOVER MAIS PROFISSIONAL */
+
+.team-card,
+.team-card-premium,
+.team-home-card-horizontal{
+  transition:
+    transform .34s ease,
+    box-shadow .34s ease,
+    border-color .34s ease;
+}
+
+.team-card:hover,
+.team-card-premium:hover,
+.team-home-card-horizontal:hover{
+  transform:translateY(-7px);
+  box-shadow:0 28px 56px rgba(31,74,67,.13);
+  border-color:rgba(31,74,67,.18);
+}
+
+.team-photo img,
+.team-photo-wrap img,
+.team-home-photo img{
+  transition:transform .38s ease, box-shadow .38s ease, filter .38s ease;
+}
+
+.team-card:hover .team-photo img,
+.team-card:hover .team-photo-wrap img,
+.team-card-premium:hover .team-photo-wrap img,
+.team-home-card-horizontal:hover .team-home-photo img{
+  transform:scale(1.045);
+  box-shadow:0 18px 34px rgba(42,36,30,.14);
+  filter:saturate(1.02);
+}
+
+/* BOTÃO OUTLINE PREMIUM */
+
+.btn-outline-soft{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 22px;
+  border:1px solid rgba(31,74,67,.18);
+  border-radius:999px;
+  background:rgba(255,255,255,.60);
+  color:#264f47;
+  font-weight:600;
+  transition:
+    transform .28s ease,
+    background .28s ease,
+    border-color .28s ease;
+}
+
+.btn-outline-soft:hover{
+  transform:translateY(-2px);
+  background:rgba(255,255,255,.88);
+  border-color:rgba(31,74,67,.28);
+}
+
+/* INTRO PREMIUM */
+
+.team-intro,
+.especialidades-intro,
+.mvv-header,
+.section-heading{
+  text-align:center;
+}
+
+.team-intro h2,
+.especialidades-intro h2,
+.mvv-header h2,
+.section-heading h2{
+  margin-bottom:12px;
+  font-family:"Cormorant Garamond", serif;
+  font-size:clamp(2.1rem, 3vw, 3rem);
+  line-height:1.06;
+  letter-spacing:-.02em;
+  color:#264f47;
+}
+
+.team-intro p,
+.especialidades-intro p,
+.mvv-header p,
+.section-heading p{
+  max-width:760px;
+  margin:0 auto;
+  color:#6f6a64;
+  line-height:1.78;
+}
+
+/* CTA PREMIUM */
+
+.cta-box,
+.cta-team,
+.cta-specialties,
+.cta-premium{
+  max-width:940px;
+  margin:0 auto;
+  padding:clamp(28px, 4vw, 44px);
+  background:linear-gradient(135deg, rgba(255,255,255,.94), rgba(250,247,243,.98));
+  border:1px solid rgba(31,74,67,.08);
+  border-radius:28px;
+  box-shadow:0 22px 52px rgba(31,74,67,.08);
+  text-align:center;
+}
+
+.cta-box h2,
+.cta-team h2,
+.cta-specialties h2,
+.cta-premium h2{
+  max-width:17ch;
+  margin:0 auto 12px;
+  font-family:"Cormorant Garamond", serif;
+  font-size:clamp(2rem, 2.8vw, 2.7rem);
+  line-height:1.08;
+  letter-spacing:-.02em;
+  color:#264f47;
+}
+
+.cta-box p,
+.cta-team p,
+.cta-specialties p,
+.cta-premium p{
+  max-width:700px;
+  margin:0 auto 1.6rem;
+  color:#6f6a64;
+  line-height:1.8;
+}
+
+/* RESPONSIVO */
+
+@media (max-width:768px){
+  .page-hero{
+    padding:54px 0 24px;
+  }
+
+  .page-hero h1,
+  .hero-title{
+    max-width:95%;
+    font-size:34px;
+    line-height:1.16;
+  }
+
+  .page-hero p{
+    max-width:92%;
+    font-size:16px;
+  }
+
+  .content-card,
+  .service-card,
+  .team-card,
+  .team-mini-card,
+  .feature-card,
+  .mode-card,
+  .step-card,
+  .info-card,
+  .mini-info-card{
+    border-radius:22px;
+  }
+
+  .cta-box,
+  .cta-team,
+  .cta-specialties,
+  .cta-premium{
+    padding:24px 18px;
+    border-radius:22px;
+  }
+}
